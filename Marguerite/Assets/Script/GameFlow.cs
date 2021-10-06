@@ -63,6 +63,8 @@ public class GameFlow : MonoBehaviour
                     _endingMusic.volume = Mathf.Lerp(0, destVolume, scd.Progress);
                     yield return null;
                 }
+                _music.volume = 0;
+                _endingMusic.volume = destVolume;
 
                 yield break;
             }
